@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1> Sign up all the people! </h1>
+
+<form action = "/" method="post" style = "display: block;">
+    <ul style="list-style: none;">
+        <li>
+            <label for="username">Username:</label>
+            <input id="username" type="text" name="username" value="{{username}}" style="width:30%; margin:2%;"/> 
+            {{errorUsername}}
+        </li>
+        <li>
+            <label for="password">Password: </label>
+            <input id="password" type="password" name="password" style="width:30%; margin:2%;"/>
+            {{errorPassword}}
+        </li>
+        <li>
+            <label for="verify">Verify: </label>
+            <input id="verfiy" type="password" name="verify" style="width:30%; margin:2%;"/>
+            {{errorVerify}}
+        </li>
+        <li>
+            <label for="email">Email (optional): </label>
+            <input id="email" type="text" name="email" value="{{email}}" style="width:30%; margin:2%;" />
+            {{errorEmail}}
+        </li>
+        <input type = "submit" />
+    </ul>
+</form>
+
+
+{% endblock %}
